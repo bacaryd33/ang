@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
-  title = 'ang';
+  isAuth = false;
+
+  constructor(){
+    setTimeout( ()=>{this.isAuth =true;} , 3000 ); 
+  }
 }
