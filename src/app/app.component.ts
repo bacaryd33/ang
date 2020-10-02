@@ -11,4 +11,8 @@ export class AppComponent {
   constructor(){
     setTimeout( ()=>{this.isAuth =true;} , 3000 ); 
   }
+
+  allOn(){
+    console.log("Allumer les appareils");
+  }
 }
