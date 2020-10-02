@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isAuth = false;
 
+  app1="Machine à laver";
+  app2="Machine  kawa";
+  app3="Sèche linge"
+
   constructor(){
     setTimeout( ()=>{this.isAuth =true;} , 3000 ); 
   }
