@@ -1,16 +1,22 @@
 <div style="text-align: center;">
-  <h1>Welcome {{title}}!</h1>
+  <!-- <h1>Welcome {{title}}!</h1> -->
 </div>
 <app-monpremier></app-monpremier>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <h2>Mes appareils</h2>
-      <ul class="list-group">
+        <ul class="list-group">
+          <app-appareil  *ngFor="let appareil of appareils"
+                          [appareilName]="appareil.name"
+                          [appareilStatus]="appareil.status"></app-appareil>
+        </ul>
+
+      <!-- <ul class="list-group">
         <app-appareil [appareilName]="app1"></app-appareil>
         <app-appareil [appareilName]="app2"></app-appareil>
         <app-appareil [appareilName]="app3"></app-appareil>
-      </ul>
+      </ul> -->
       <button 
         class="btn btn-success" 
         [disabled]="!isAuth"
