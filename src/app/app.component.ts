@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isAuth = false;
-
+  
+  appon="ON";
+  appoff="OFF";
   app1="Machine à laver";
   app2="Machine  kawa";
   app3="Sèche linge";
