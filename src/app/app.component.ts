@@ -7,7 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isAuth = false;
-  
+  lastUpdate = new Promise((resolve,reject) => {
+    const date = new Date();
+    setTimeout( () => {
+      resolve(date);
+    },
+    2000);
+  });
+  title = "Angular c'est cool"
   appon="ON";
   appoff="OFF";
   app1="Machine à laver";
