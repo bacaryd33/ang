@@ -1,15 +1,15 @@
-<div id="">
-    <div id="top">
+<div id="post" style=" max-width: 70%; display: flex; flex-direction: column;">
+    <div id="post_top" class="top_post" style="background-color: rosybrown; display: flex; justify-content: space-between;">
         <h2>{{title}}</h2>
         <h4>{{created_at}}</h4>
     </div>
 
-    <div id="mid">
+    <div id="post_mid" style="display: flex; background-color: saddlebrown;">
         <h4>{{content}}</h4>
     </div>
-    <div id="bottom">
-        <button>Like</button>
-        <button>Unlike</button>
+    <div id="bottom" style="display: flex; justify-content:left; background-color:slateblue">
+        <button (click)="SetLike(1)">Like</button>
+        <button (click)="SetLike(-1)">Unlike</button>
         <h4>{{loveIts}}</h4>
     </div>
 </div>

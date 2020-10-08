@@ -10,12 +10,19 @@ export class PostListItemComponentComponent implements OnInit {
   
   @Input() title: String;
   @Input() content: String;
-  @Input() loveIts: BigInteger;
+  @Input() loveIts: number;
   @Input() created_at: Date;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  
+  SetLike(newvalue): number {
+    if(this.loveIts !== newvalue){
+      this.loveIts = newvalue;
+    }else{
+      return newvalue;
+    }
+  }
 }

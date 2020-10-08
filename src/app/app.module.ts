@@ -8,6 +8,7 @@ import {FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostListComponentComponent } from './post-list-component/post-list-component.component';
 import { PostListItemComponentComponent } from './post-list-item-component/post-list-item-component.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PostListItemComponentComponent } from './post-list-item-component/post-
     PostListItemComponentComponent
   ],
   imports: [
+    MatCardModule,
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule

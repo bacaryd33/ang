@@ -1,10 +1,12 @@
-<p>Ici c'est la liste des posts</p>
+<div id="thread">
     <app-post-list-item-component 
         *ngFor="let val of list"
         [title]="val.title"
         [content]="val.content"
         [loveIts]="val.loveIts"
         [created_at]="val.created_at"
-    >
+        [ngStyle]="{'color': getColor()}"
+    >    
+    k
     </app-post-list-item-component>
-<p>Fin liste des posts</p>
+</div>
