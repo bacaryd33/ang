@@ -14,7 +14,27 @@ export class AppComponent {
     },
     2000);
   });
-  title = "Angular c'est cool"
+  title = "Angular Mini Thread"
+  list =[
+      {  
+        title: "Mon premier post",  
+        content: "Lorem Ipsum",  
+        loveIts: null,  
+        created_at: new Date()
+      },
+      {  
+        title: "Mon second post",  
+        content: "Lorem Ipsum",  
+        loveIts: null,  
+        created_at: new Date()
+      },
+      {  
+        title: "Mon troisième post",  
+        content: "Lorem Ipsum",  
+        loveIts: null,  
+        created_at: new Date()
+      },
+   ]; 
   appon="ON";
   appoff="OFF";
   app1="Machine à laver";
