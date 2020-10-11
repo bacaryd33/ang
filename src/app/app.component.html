@@ -1,15 +1,14 @@
 <div style="text-align: left;">
   <h1>{{title}}</h1>
 </div>
-
-<!-- creer 2 composants
-post : title, content, loveIts, created_at -->
 <app-post-list-component [list]="list"></app-post-list-component>
 <div class="container">
+<!-- creer 2 composants
+post : title, content, loveIts, created_at -->
   <div class="row">
     <div class="col-xs-12">
       <!-- <h2>Mes appareils au {{lastUpdate | async | date:'short'}}</h2>
-        <ul class="list-group">
+        --<ul class="list-group">
           <app-appareil  *ngFor="let appareil of appareils"
                           [appareilName]="appareil.name"
                           [appareilStatus]="appareil.status"></app-appareil>

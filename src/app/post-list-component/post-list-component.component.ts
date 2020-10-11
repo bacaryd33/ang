@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-post-list-component',
   templateUrl: './post-list-component.component.html',

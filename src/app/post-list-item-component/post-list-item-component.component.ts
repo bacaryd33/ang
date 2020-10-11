@@ -18,11 +18,12 @@ export class PostListItemComponentComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  SetLike(newvalue): number {
+  SetLike(newvalue): void {
+    console.log(newvalue);
     if(this.loveIts !== newvalue){
       this.loveIts = newvalue;
     }else{
-      return newvalue;
+      this.loveIts = null;
     }
   }
 }

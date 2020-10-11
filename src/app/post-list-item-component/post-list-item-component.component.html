@@ -1,15 +1,40 @@
-<div id="post" style=" max-width: 70%; display: flex; flex-direction: column;">
-    <div id="post_top" class="top_post" style="background-color: rosybrown; display: flex; justify-content: space-between;">
+<style>
+    .liked{
+        color: yellowgreen;
+        background-color: green;
+    };
+    .not_liked{
+        color:lightsalmon;
+        background-color: red;
+    };
+    .basic{
+        color: gray;
+        background-color: white;
+    };
+</style>
+<div id="post" style=" max-width: 70%; display: flex; flex-direction: column;" 
+    [ngClass]="{
+        'liked':loveIts===2,
+        'not_liked':loveIts===3,
+        'basic':loveIts===null    
+    }"
+    >
+    <div id="post_top" class="top_post" style="display: flex; justify-content: space-between;">
         <h2>{{title}}</h2>
-        <h4>{{created_at}}</h4>
+        <h4 style="color: thistle;">{{created_at}}</h4>
     </div>
-
-    <div id="post_mid" style="display: flex; background-color: saddlebrown;">
+    <div id="post_mid" style="display: flex;">
         <h4>{{content}}</h4>
     </div>
-    <div id="bottom" style="display: flex; justify-content:left; background-color:slateblue">
-        <button (click)="SetLike(1)">Like</button>
-        <button (click)="SetLike(-1)">Unlike</button>
-        <h4>{{loveIts}}</h4>
+    <div id="bottom" style="display: flex; justify-content:left;">
+        <button (click)="SetLike(2)" style="
+        background-color: springgreen; 
+        color: white; font-weight: bold; 
+        border: none;">Like</button>
+        <button (click)="SetLike(3)" style="
+        background-color: tomato;
+        color: white;
+        font-weight: bold;
+        border: none;">Unlike</button>
     </div>
 </div>
